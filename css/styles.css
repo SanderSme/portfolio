@@ -12,40 +12,41 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.social {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .header-heading {
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
-.page-container {
-  width: 90%;
-  margin: 0 auto;
+.social a {
+  margin-right: 0.5rem;
+  color: white;
 }
 
 .hero-banner {
   width: 100%;
-  background-color: #111;
   height: fit-content;
-  padding-bottom: 1rem;
+  background-color: #111;
 }
 
-.hero-flex-container {
+.hero-banner-flex {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-info {
-  width: 100%;
+.hero-heading {
   color: white;
-  padding-top: 2rem;
-}
-
-.hero-text {
-  margin-top: 0;
-  font-size: 1.5rem;
+  margin-right: 1rem;
 }
 
 .hero-pic-desktop {
@@ -53,8 +54,13 @@ body {
 }
 
 .bio {
-  font-size: 1.3rem;
-  margin-top: 2rem;
+  color: white;
+  padding-bottom: 2rem;
+}
+
+.page-container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .project {
@@ -93,9 +99,13 @@ body {
   position: relative;
 }
 
+.site-link {
+  color: black;
+}
+
 .button {
   text-align: center;
-  margin-top: 2.5rem;
+  margin-top: 5rem;
 }
 
 .github-button {
@@ -136,11 +146,16 @@ body {
   text-decoration: none;
 }
 
-.footer-links:hover {
-  text-decoration: underline;
+.footer-info {
+  color: white;
 }
 
-.footer-info {
+.social-footer a {
+  color: white;
+  width: 4rem;
+}
+
+.fa-linkedin {
   color: white;
 }
 
@@ -149,37 +164,56 @@ body {
     max-width: 1110px;
   }
 
-  .hero-pic-mobile {
-    display: none;
+  .header-heading {
+    font-size: 2rem;
+  }
+
+  .social {
+    right: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .social a {
+    margin-right: 2rem;
+  }
+
+  .hero-banner {
+    position: relative;
+  }
+
+  .hero-banner-flex {
+    justify-content: space-between;
   }
 
   .hero-pic-desktop {
     display: flex;
-    width: 70%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  .hero-banner {
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 0;
-    position: relative;
+    width: 50%;
   }
 
   .hero-heading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-45%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    z-index: 100;
+    text-align: right;
   }
 
-  .bio-container {
-    width: 50%;
+  .first-name {
+    color: black;
+  }
+
+  .hero-pic-mobile {
+    display: none;
+  }
+
+  .portfolio {
+    font-size: 1.5rem;
+  }
+
+  .bio {
+    font-size: 1.5rem;
   }
 
   .project-pic-mobile {
@@ -190,7 +224,6 @@ body {
     display: flex;
     width: 60%;
     height: 100%;
-    z-index: 50;
   }
 
   .project-info {
@@ -201,5 +234,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .hero-name {
+    font-size: 3rem;
   }
 }
