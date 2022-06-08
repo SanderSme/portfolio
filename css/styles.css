@@ -10,7 +10,6 @@ body {
   height: 70px;
   background-color: #111;
   display: flex;
-  justify-content: center;
   align-items: center;
   position: relative;
 }
@@ -18,16 +17,18 @@ body {
 .social {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .header-heading {
   color: white;
   font-size: 1.5rem;
+  margin-left: 2rem;
 }
 
 .social a {
-  margin-right: 0.5rem;
+  margin-right: 2rem;
   color: white;
 }
 
@@ -47,6 +48,7 @@ body {
 .hero-heading {
   color: white;
   margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .hero-pic-desktop {
@@ -83,6 +85,7 @@ body {
 
 .project-heading {
   text-align: center;
+  margin-top: 0;
 }
 
 .project-pic-mobile {
@@ -164,18 +167,17 @@ body {
     max-width: 1110px;
   }
 
+  .header {
+    justify-content: center;
+  }
+
   .header-heading {
     font-size: 2rem;
+    margin: 0;
   }
 
   .social {
     right: 4rem;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .social a {
-    margin-right: 2rem;
   }
 
   .hero-banner {
@@ -198,6 +200,11 @@ body {
     display: flex;
     flex-direction: column;
     text-align: right;
+    margin: 0;
+  }
+
+  .hero-name {
+    font-size: 3rem;
   }
 
   .first-name {
@@ -226,6 +233,10 @@ body {
     height: 100%;
   }
 
+  .project-heading {
+    font-size: 1.5rem;
+  }
+
   .project-info {
     width: 35%;
   }
@@ -234,11 +245,5 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
-}
-
-@media screen and (min-width: 950px) {
-  .hero-name {
-    font-size: 3rem;
   }
 }
